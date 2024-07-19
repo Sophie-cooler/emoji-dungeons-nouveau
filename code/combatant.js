@@ -77,7 +77,7 @@ class Combatant {
                         if(moves[selectedPlayer.currentMoveValue].effect == "stat_lowered_defense"){
                             const effectChance = Math.floor(Math.random() * moves[selectedPlayer.currentMoveValue].chance);
                             if(effectChance == 0){
-                                this.defenseMod = 0.1*combatants[selectedPlayer.combatantValue].potency;
+                                this.defenseMod = 0.1*moves[selectedPlayer.currentMoveValue].potency;
                                 const effectMessage = document.createElement("p");
                                 sidebar1.appendChild(effectMessage);
                                 effectMessage.textContent = "Player " + combatants[selectedPlayer.combatantValue].name + " used " + moves[selectedPlayer.currentMoveValue].name + " on " + combatants[self.combatantValue].name + ", changing their defense by " + (this.defenseMod*-10) + ". ";
