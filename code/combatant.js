@@ -50,7 +50,7 @@ class Combatant {
                 if (selectedMove != null && selectedPlayer.hasMoved == 0) {
                     selectedPlayer.hasMoved = 1;
                     if(moves[selectedPlayer.currentMoveValue].type == "physical") {
-                        const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[self.combatantValue].defenseMultiplier + this.defenseMod)));
+                        const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[self.combatantValue].defenseMultiplier + self.defenseMod)));
                         self.health = self.health - damageDealt;
                         self.statDisplay.textContent = self.health + "/" + self.maxHealth;
                         const moveMessage = document.createElement("p");
@@ -62,7 +62,7 @@ class Combatant {
                         sidebar1.appendChild(lineBreak2);
                     }
                     else if(moves[selectedPlayer.currentMoveValue].type == "magic") {
-                        const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[self.combatantValue].magDefenseMultiplier + this.magDefenseMod)));
+                        const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[self.combatantValue].magDefenseMultiplier + self.magDefenseMod)));
                         self.health = self.health - damageDealt;
                         self.statDisplay.textContent = self.health + "/" + self.maxHealth;
                         const moveMessage = document.createElement("p");
