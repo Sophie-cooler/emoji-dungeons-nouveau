@@ -64,6 +64,11 @@ function newCombatant(team, id, level) {
 function battleFlow() {
     setTimeout(function() {
         removeBattleText();
+        
+        allPlayers.forEach(combatant => if(combatant.hasMoved == 1){
+            combatant.style.borderColor = "red";
+        })
+
         if (allPlayers.every(combatant => combatant.hasMoved == 1)){
             allEnemies.forEach(combatant => combatant.performActionAsEnemy());
             allPlayers.forEach(combatant => combatant.hasMoved = 0);
