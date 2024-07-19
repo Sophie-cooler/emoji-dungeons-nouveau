@@ -72,7 +72,7 @@ class Combatant {
                         sidebar1.appendChild(lineBreak1);
                         const lineBreak2 = document.createElement("br");
                         sidebar1.appendChild(lineBreak2);
-                    };
+                    }
                     else if(moves[selectedPlayer.currentMoveValue].type == "status"){
                         if(moves[selectedPlayer.currentMoveValue].effect == "stat_lowered_defense"){
                             const effectChance = Math.floor(Math.random() * moves[selectedPlayer.currentMoveValue].chance);
