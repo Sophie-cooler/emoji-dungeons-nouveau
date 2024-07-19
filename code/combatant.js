@@ -255,6 +255,7 @@ class Combatant {
                 sidebar1.appendChild(lineBreak2);
                 self.victim.icon.remove();
                 self.victim.statDisplay.remove();
+                allPlayers.splice(self.victim.posInList, 1);
             };
         };
     };
