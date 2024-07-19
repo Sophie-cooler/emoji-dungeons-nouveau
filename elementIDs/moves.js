@@ -18,7 +18,7 @@ const moves = [
             "type":"status",
             "damage":0,
             "effect":"stat_lowered_defense",
-            "chance":1,
+            "chance":0,
             "potency":2,
             "target":2,
             "description":"Lower the target's defense by 2 stages. Targets an enemy."
@@ -30,7 +30,7 @@ const moves = [
             "type":"physical",
             "damage":6,
             "effect":"flinch",
-            "chance":0.1,
+            "chance":9,
             "potency":1,
             "target":2,
             "description":"Deal 6 physical damage. Has a 10% chance to flinch. Targets an enemy."
@@ -42,7 +42,7 @@ const moves = [
             "type":"physical",
             "damage":10,
             "effect":"trap",
-            "chance":1,
+            "chance":0,
             "potency":3,
             "target":2,
             "description":"Deal 10 physical damage. Has a 100% chance to trap. Targets an enemy."
@@ -66,7 +66,7 @@ const moves = [
             "type":"status",
             "damage":5,
             "effect":"phase",
-            "chance":1,
+            "chance":0,
             "potency":2,
             "target":3,
             "description":"Phase out of the battlefield for 2 turns. Targets self."
@@ -78,7 +78,7 @@ const moves = [
             "type":"magic",
             "damage":12,
             "effect":"none",
-            "chance":1,
+            "chance":0,
             "potency":0,
             "target":2,
             "description":"Deal 12 magic damage."

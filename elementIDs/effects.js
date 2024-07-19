@@ -1,7 +1,7 @@
 const effects = [
         {
             "id":"stat_lowered_defense",
-            "name":"Defense Drop"
+            "name":"Defense"
         },
         {
             "id":"flinch",
