@@ -73,7 +73,7 @@ function battleFlow() {
 
 function removeBattleText() {
     if (sidebar1.offsetHeight > sidebar1Container.offsetHeight - 24) {
-        if (sidebar1.firstChild.nodeName != 'BR') {
+        while (sidebar1.firstChild.nodeName != 'BR') {
             sidebar1.removeChild(sidebar1.firstChild);
         };
         sidebar1.removeChild(sidebar1.firstChild);
