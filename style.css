@@ -55,7 +55,7 @@ p {
     bottom: 10px;
     top: 10px;
     margin: auto;
-    font-size: 2em;
+    font-size: 0.5em;
     overflow: hidden;
     overflow-wrap: break-word
 }
@@ -72,13 +72,13 @@ p {
     bottom: 10px;
     top: 10px;
     margin: auto;
-    font-size: 2em;
+    font-size: 0.5em;
     overflow: hidden;
     overflow-wrap: break-word
 }
 
 .player-container {
-    font-size: 2em;
+    font-size: 0.5em;
     height: 96%;
     width: 47%;
     background-color: white;
@@ -93,7 +93,7 @@ p {
 }
 
 .enemy-container {
-    font-size: 2em;
+    font-size: 0.5em;
     height: 96%;
     width: 47%;
     background-color: white;
@@ -115,7 +115,7 @@ p {
     border:6px solid black;
     border-radius: 6px;
     transition-duration: 0;
-    font-size: 2em;
+    font-size: 0.5em;
     font-display: black;
     font-weight: bold;
     font-style: italic;
@@ -132,7 +132,7 @@ p {
 .playerButton {
     height: 100%;
     width: 25%;
-    font-size: 2em;
+    font-size: 0.5em;
     border:4px solid transparent;
     background-color: transparent;
     margin: 0;
@@ -149,7 +149,7 @@ p {
 .enemyButton {
     height: 100%;
     width: 25%;
-    font-size: 2em;
+    font-size: 0.5em;
     border:4px solid transparent;
     background-color: transparent;
     margin: 0;
