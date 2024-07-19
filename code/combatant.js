@@ -49,6 +49,7 @@ class Combatant {
             this.icon.onclick = function selfWasAttacked() {
                 if (selectedMove != null && selectedPlayer.hasMoved == 0) {
                     selectedPlayer.hasMoved = 1;
+                    selectedPlayer.style.borderColor = "red";
                     if(moves[selectedPlayer.currentMoveValue].type == "physical") {
                         const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[self.combatantValue].defenseMultiplier + this.defenseMod)));
                         self.health = self.health - damageDealt;
