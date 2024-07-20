@@ -30,7 +30,7 @@ const moves = [
             "type":"physical",
             "damage":6,
             "effect":"flinch",
-            "chance":0,
+            "chance":9,
             "potency":1,
             "target":2,
             "description":"Deal 6 physical damage. Has a 10% chance to flinch. Targets an enemy."
