@@ -80,6 +80,13 @@ class Combatant {
                         sidebar1.appendChild(lineBreak1);
                         const lineBreak2 = document.createElement("br");
                         sidebar1.appendChild(lineBreak2);
+
+                        if(selectedMove.effect != "none"){
+                            const effectChance = Math.floor(Math.random() * moves[selectedPlayer.currentMoveValue].chance);
+                            if(effectChance == 0){
+                                self.status.push(selectedMove.effect);
+                            };
+                        };
                     }
                     else if(moves[selectedPlayer.currentMoveValue].type == "status"){
                         if(moves[selectedPlayer.currentMoveValue].effect == "stat_lowered_defense"){
@@ -256,6 +263,7 @@ class Combatant {
 
         if(this.health != 0 && this.health > 0){
             if(self.status.includes("flinch")){
+                const index = self.status.indexOf("flinch");
                 const moveMessage = document.createElement("p");
                 sidebar1.appendChild(moveMessage);
                 moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " flinched and couldn't move! ";
@@ -263,6 +271,7 @@ class Combatant {
                 sidebar1.appendChild(lineBreak1);
                 const lineBreak2 = document.createElement("br");
                 sidebar1.appendChild(lineBreak2);
+                array.splice(index, 1)
             }
             else {
                 if(moves[self.currentMoveValue].id == self.movesList[self.randomMoveValue]){
@@ -277,6 +286,13 @@ class Combatant {
                         sidebar1.appendChild(lineBreak1);
                         const lineBreak2 = document.createElement("br");
                         sidebar1.appendChild(lineBreak2);
+
+                        if(selectedMove.effect != "none"){
+                            const effectChance = Math.floor(Math.random() * moves[self.currentMoveValue].chance);
+                            if(effectChance == 0){
+                                self.victim.status.push(selectedMove.effect);
+                            };
+                        };
                     }
                     else if(moves[selectePlayer.currentMoveValue].type == "magic"){
                         const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.magDefenseMod)));
@@ -289,6 +305,13 @@ class Combatant {
                         sidebar1.appendChild(lineBreak1);
                         const lineBreak2 = document.createElement("br");
                         sidebar1.appendChild(lineBreak2);
+
+                        if(selectedMove.effect != "none"){
+                            const effectChance = Math.floor(Math.random() * moves[self.currentMoveValue].chance);
+                            if(effectChance == 0){
+                                self.victim.status.push(selectedMove.effect);
+                            };
+                        };
                     }
                     else if(moves[selectedPlayer.currentMoveValue].type == "status"){
                         if(moves[selectedPlayer.currentMoveValue].effect == "stat_lowered_defense"){

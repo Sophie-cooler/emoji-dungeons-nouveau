@@ -68,7 +68,6 @@ function battleFlow() {
         if (allPlayers.every(combatant => combatant.hasMoved == 1)){
             allEnemies.forEach(combatant => combatant.performActionAsEnemy());
             allPlayers.forEach(combatant => combatant.hasMoved = 0);
-            allPlayers.forEach(combatant => combatant.style.borderColor = "greenyellow");
         };
     }, 50);
 };
