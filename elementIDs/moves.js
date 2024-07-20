@@ -33,7 +33,7 @@ const moves = [
             "chance":9,
             "potency":1,
             "target":2,
-            "description":"Deal 6 physical damage. Has a 10% chance to flinch. Targets an enemy."
+            "description":"6 base physical damage. Has a 10% chance to flinch. Targets an enemy."
         },
         {
             "id":"grip_jaw",
@@ -45,7 +45,7 @@ const moves = [
             "chance":0,
             "potency":3,
             "target":2,
-            "description":"Deal 10 physical damage. Has a 100% chance to trap. Targets an enemy."
+            "description":"10 base physical damage. Has a 100% chance to trap. Targets an enemy."
         },
         {
             "id":"scratch",
@@ -57,7 +57,7 @@ const moves = [
             "chance":0,
             "potency":1,
             "target":2,
-            "description":"Deal 5 physical damage. Targets an enemy."
+            "description":"5 base physical damage. Targets an enemy."
         },
         {
             "id":"escape",
@@ -81,6 +81,6 @@ const moves = [
             "chance":0,
             "potency":0,
             "target":2,
-            "description":"Deal 12 magic damage."
+            "description":"12 base magic damage. Targets an enemy."
         }
     ];
