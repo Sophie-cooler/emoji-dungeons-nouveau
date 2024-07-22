@@ -7,6 +7,7 @@ const button4 = document.getElementById("button4");
 const sidebar1Container = document.getElementById("sidebar1Container");
 const sidebar1 = document.getElementById("battleText");
 const sidebar2 = document.getElementById("selectedMoveText");
+const gameContainer = document.getElementById("gameContainer")
 let haveAllEnemiesStarted;
 var allCombatants = [];
 var allPlayers = [];
@@ -80,4 +81,19 @@ function removeBattleText() {
         sidebar1.removeChild(sidebar1.firstChild);
     };
     battleFlow();
+};
+
+function openShop() {
+    const menuContainer = document.createElement("div");
+    const optionContainer = document.createElement("div")
+    const option1 = document.createElement("button");
+    const option2 = document.createElement("button");
+    const option3 = document.createElement("button");
+    gameContainer.appendChild(menuContainer);
+    menuContainer.appendChild(option1);
+    menuContainer.appendChild(option2);
+    menuContainer.appendChild(option3);
+    option1.classList.add("optionButton");
+    option2.classList.add("optionButton");
+    option3.classList.add("optionButton");
 };

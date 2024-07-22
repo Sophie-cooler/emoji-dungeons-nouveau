@@ -165,4 +165,8 @@ p {
 
 button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-};
+}
+
+.optionButton {
+    background-color: aqua;
+}
