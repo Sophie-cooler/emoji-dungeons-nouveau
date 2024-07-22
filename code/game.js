@@ -90,6 +90,7 @@ function openShop() {
     const option2 = document.createElement("button");
     const option3 = document.createElement("button");
     gameContainer.appendChild(menuContainer);
+    menuContainer.classList.add("shopMenu");
     menuContainer.appendChild(option1);
     menuContainer.appendChild(option2);
     menuContainer.appendChild(option3);
