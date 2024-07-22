@@ -101,12 +101,12 @@ function openShop() {
     menuContainer.appendChild(option1);
     menuContainer.appendChild(option2);
     menuContainer.appendChild(option3);
-    menuContainer.appendChild(opt1text);
-    menuContainer.appendChild(opt2text);
-    menuContainer.appendChild(opt3text);
-    menuContainer.appendChild(opt1button);
-    menuContainer.appendChild(opt1button);
-    menuContainer.appendChild(opt1button);
+    option1.appendChild(opt1text);
+    option2.appendChild(opt2text);
+    option3.appendChild(opt3text);
+    option1.appendChild(opt1button);
+    option2.appendChild(opt2button);
+    option3.appendChild(opt3button);
 
     option1.classList.add("optionContainer");
     option2.classList.add("optionContainer");
