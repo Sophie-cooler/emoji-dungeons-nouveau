@@ -85,16 +85,42 @@ function removeBattleText() {
 
 function openShop() {
     const menuContainer = document.createElement("div");
-    const optionContainer = document.createElement("div")
-    const option1 = document.createElement("button");
-    const option2 = document.createElement("button");
-    const option3 = document.createElement("button");
+    const optionContainer = document.createElement("div");
+    const option1 = document.createElement("div");
+    const option2 = document.createElement("div");
+    const option3 = document.createElement("div");
+    const opt1text = document.createElement("p");
+    const opt2text = document.createElement("p");
+    const opt3text = document.createElement("p");
+    const opt1button = document.createElement("button");
+    const opt2button = document.createElement("button");
+    const opt3button = document.createElement("button");
+
     gameContainer.appendChild(menuContainer);
     menuContainer.classList.add("shopMenu");
     menuContainer.appendChild(option1);
     menuContainer.appendChild(option2);
     menuContainer.appendChild(option3);
-    option1.classList.add("optionButton");
-    option2.classList.add("optionButton");
-    option3.classList.add("optionButton");
+    menuContainer.appendChild(opt1text);
+    menuContainer.appendChild(opt2text);
+    menuContainer.appendChild(opt3text);
+    menuContainer.appendChild(opt1button);
+    menuContainer.appendChild(opt1button);
+    menuContainer.appendChild(opt1button);
+
+    option1.classList.add("optionContainer");
+    option2.classList.add("optionContainer");
+    option3.classList.add("optionContainer");
+
+    opt1button.onclick = function buyItem1() {
+        console.log = "opt1"
+    };
+
+    opt2button.onclick = function buyItem2() {
+        console.log = "opt2"
+    };
+
+    opt3button.onclick = function buyItem3() {
+        console.log = "opt3"
+    };
 };
