@@ -177,4 +177,8 @@ button {
     border:6px solid black;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.15);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
