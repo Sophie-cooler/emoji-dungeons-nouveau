@@ -98,6 +98,9 @@ function openShop() {
 
     gameContainer.appendChild(menuContainer);
     menuContainer.classList.add("shopMenu");
+    opt1button.classList.add("shopButton");
+    opt2button.classList.add("shopButton");
+    opt3button.classList.add("shopButton");
     menuContainer.appendChild(option1);
     menuContainer.appendChild(option2);
     menuContainer.appendChild(option3);

@@ -173,6 +173,7 @@ button {
     width: 15%;
     justify-content: center;
     justify-items: center;
+    padding: 2%
 }
 
 .shopMenu {
@@ -187,6 +188,9 @@ button {
     right: 0;
     text-align: center;
     z-index: 1;
+    display: flex;
     justify-content: center;
     justify-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
