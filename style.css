@@ -168,12 +168,17 @@ button {
 }
 
 .optionContainer {
-    background-color: aqua;
+    background-color: blanchedalmond;
     height: 30%;
     width: 15%;
     justify-content: center;
     justify-items: center;
-    padding: 2%
+    margin: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 6px solid black;
+    border-radius: 6px;
 }
 
 .shopMenu {
@@ -193,4 +198,26 @@ button {
     justify-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.shopButton {
+    margin: auto;
+    width: 47%;
+    height: 45%;
+    background-color: lightskyblue;
+    border:6px solid black;
+    border-radius: 48px;
+    transition-duration: 0;
+    font-size: 1.5em;
+    font-display: black;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.shopButton:hover {
+    background-color: lightblue;
+}
+
+.shopButton:active {
+    background-color: lightskyblue;
 }
