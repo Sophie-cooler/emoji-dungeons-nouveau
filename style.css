@@ -196,8 +196,6 @@ button {
     display: flex;
     justify-content: center;
     justify-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
 }
 
