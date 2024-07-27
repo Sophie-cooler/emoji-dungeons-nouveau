@@ -202,8 +202,8 @@ button {
 
 .shopButton {
     margin: auto;
-    width: 47%;
-    height: 45%;
+    width: 80%;
+    height: 38%;
     background-color: lightskyblue;
     border:6px solid black;
     border-radius: 48px;
@@ -212,6 +212,9 @@ button {
     font-display: black;
     font-weight: bold;
     font-style: italic;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .shopButton:hover {

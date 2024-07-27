@@ -116,14 +116,14 @@ function openShop() {
     option3.classList.add("optionContainer");
 
     opt1button.onclick = function buyItem1() {
-        console.log = "opt1"
+        console.log("opt1");
     };
 
     opt2button.onclick = function buyItem2() {
-        console.log = "opt2"
+        console.log("opt2");
     };
 
     opt3button.onclick = function buyItem3() {
-        console.log = "opt3"
+        console.log("opt3");
     };
 };
