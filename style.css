@@ -174,11 +174,11 @@ button {
     justify-content: center;
     justify-items: center;
     margin: auto;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     border: 6px solid black;
     border-radius: 6px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .shopMenu {
