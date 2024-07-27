@@ -213,6 +213,7 @@ button {
     font-weight: bold;
     font-style: italic;
     top: 50%;
+    align-self: center;
 }
 
 .shopButton:hover {
