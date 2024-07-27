@@ -95,12 +95,8 @@ function openShop() {
     const opt1button = document.createElement("button");
     const opt2button = document.createElement("button");
     const opt3button = document.createElement("button");
-
+    menuContainer.id = "menu-container";
     gameContainer.appendChild(menuContainer);
-    menuContainer.classList.add("shopMenu");
-    opt1button.classList.add("shopButton");
-    opt2button.classList.add("shopButton");
-    opt3button.classList.add("shopButton");
     menuContainer.appendChild(option1);
     menuContainer.appendChild(option2);
     menuContainer.appendChild(option3);
@@ -111,9 +107,13 @@ function openShop() {
     option2.appendChild(opt2button);
     option3.appendChild(opt3button);
 
+    menuContainer.classList.add("shopMenu");
     option1.classList.add("optionContainer");
     option2.classList.add("optionContainer");
     option3.classList.add("optionContainer");
+    opt1button.classList.add("shopButton");
+    opt2button.classList.add("shopButton");
+    opt3button.classList.add("shopButton");
 
     opt1button.onclick = function buyItem1() {
         console.log("opt1");
@@ -126,4 +126,12 @@ function openShop() {
     opt3button.onclick = function buyItem3() {
         console.log("opt3");
     };
+};
+
+function closeShop(){
+    const menuContainer = document.getElementById("menu-container");
+    while (menuContainer.firstChild) {
+        menuContainer.removeChild(menuContainer.lastChild);
+    };
+    menuContainer.remove();
 };
