@@ -198,6 +198,7 @@ button {
     justify-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .shopButton {
@@ -212,8 +213,6 @@ button {
     font-display: black;
     font-weight: bold;
     font-style: italic;
-    top: 50%;
-    align-self: center;
 }
 
 .shopButton:hover {
