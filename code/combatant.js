@@ -231,48 +231,48 @@ class Combatant {
         self.victim = allPlayers[Math.floor(Math.random() * (allPlayers.length - 1))];
 
         if(this.health != 0 && this.health > 0){
-                if(moves[self.currentMoveValue].id == self.movesList[self.randomMoveValue]){
-                    if(moves[selectedPlayer.currentMoveValue].type == "physical"){
-                        const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.defenseMod)));
-                        self.victim.health = self.victim.health - damageDealt;
-                        self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
-                        const moveMessage = document.createElement("p");
-                        sidebar1.appendChild(moveMessage);
-                        moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[self.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
-                        const lineBreak1 = document.createElement("br");
-                        sidebar1.appendChild(lineBreak1);
-                        const lineBreak2 = document.createElement("br");
-                        sidebar1.appendChild(lineBreak2);
-                    }
-                    else if(moves[selectePlayer.currentMoveValue].type == "magic"){
-                        const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.magDefenseMod)));
-                        self.victim.health = self.victim.health - damageDealt;
-                        self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
-                        const moveMessage = document.createElement("p");
-                        sidebar1.appendChild(moveMessage);
-                        moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[self.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
-                        const lineBreak1 = document.createElement("br");
-                        sidebar1.appendChild(lineBreak1);
-                        const lineBreak2 = document.createElement("br");
-                        sidebar1.appendChild(lineBreak2);
-                    };
+            if(moves[self.currentMoveValue].id == self.movesList[self.randomMoveValue]){
+                if(moves[selectedPlayer.currentMoveValue].type == "physical"){
+                    const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.defenseMod)));
+                    self.victim.health = self.victim.health - damageDealt;
+                    self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
+                    const moveMessage = document.createElement("p");
+                    sidebar1.appendChild(moveMessage);
+                    moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[self.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
+                    const lineBreak1 = document.createElement("br");
+                    sidebar1.appendChild(lineBreak1);
+                    const lineBreak2 = document.createElement("br");
+                    sidebar1.appendChild(lineBreak2);
+                }
+                else if(moves[selectePlayer.currentMoveValue].type == "magic"){
+                    const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.magDefenseMod)));
+                    self.victim.health = self.victim.health - damageDealt;
+                    self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
+                    const moveMessage = document.createElement("p");
+                    sidebar1.appendChild(moveMessage);
+                    moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[self.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
+                    const lineBreak1 = document.createElement("br");
+                    sidebar1.appendChild(lineBreak1);
+                    const lineBreak2 = document.createElement("br");
+                    sidebar1.appendChild(lineBreak2);
                 };
-                while(moves[self.currentMoveValue].id != self.movesList[self.randomMoveValue]) {
-                    self.currentMoveValue++;
-                    if(moves[self.currentMoveValue].id == self.movesList[self.randomMoveValue]){
-                        const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * combatants[self.combatantValue].damageMultiplier));
-                        self.victim.health = self.victim.health - damageDealt;
-                        self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
-                        const moveMessage = document.createElement("p");
-                        sidebar1.appendChild(moveMessage);
-                        moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[self.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
-                        const lineBreak1 = document.createElement("br");
-                        sidebar1.appendChild(lineBreak1);
-                        const lineBreak2 = document.createElement("br");
-                        sidebar1.appendChild(lineBreak2);
-                        break;
-                    };
-                };            
+            };
+            while(moves[self.currentMoveValue].id != self.movesList[self.randomMoveValue]) {
+                self.currentMoveValue++;
+                if(moves[self.currentMoveValue].id == self.movesList[self.randomMoveValue]){
+                    const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * combatants[self.combatantValue].damageMultiplier));
+                    self.victim.health = self.victim.health - damageDealt;
+                    self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
+                    const moveMessage = document.createElement("p");
+                    sidebar1.appendChild(moveMessage);
+                    moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[self.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
+                    const lineBreak1 = document.createElement("br");
+                    sidebar1.appendChild(lineBreak1);
+                    const lineBreak2 = document.createElement("br");
+                    sidebar1.appendChild(lineBreak2);
+                    break;
+                };
+            };            
             if(self.victim.health <= 0){
                 const battleMessage = document.createElement("p");
                 sidebar1.appendChild(battleMessage);
@@ -288,7 +288,7 @@ class Combatant {
         };
     };
     //usingVictim should be 1 or 0 (true or false)
-    recieveMove(usingVictim){
+    issueMove(usingVictim){
         if(usingVictim == 1){
             if(moves[selectedPlayer.currentMoveValue].type == "magic"){
                 const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.magDefenseMod)));
