@@ -49,9 +49,9 @@ class Combatant {
             this.icon.onclick = function selfWasAttacked() {
                 if (selectedMove != null && selectedPlayer.hasMoved == 0) {
                     selectedPlayer.hasMoved = 1;
-                    this.issueMove(0);
+                    self.issueMove(0);
                     if (self.health <= 0) {
-                        this.die(0);
+                        self.die(0);
                     };
                 };
             };
@@ -217,17 +217,17 @@ class Combatant {
 
         if(this.health != 0 && this.health > 0){
             if(moves[self.currentMoveValue].id == self.movesList[self.randomMoveValue]){
-                this.issueMove(1);
+                self.issueMove(1);
             };
             while(moves[self.currentMoveValue].id != self.movesList[self.randomMoveValue]) {
                 self.currentMoveValue++;
                 if(moves[self.currentMoveValue].id == self.movesList[self.randomMoveValue]){
-                    this.issueMove(1);
+                    self.issueMove(1);
                     break;
                 };
             };            
             if(self.victim.health <= 0){
-                this.die(1);
+                self.die(1);
             };
         };
     };
