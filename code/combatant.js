@@ -238,7 +238,7 @@ class Combatant {
     */
     issueMove(usingVictim){
         if(usingVictim == 1){
-            if(moves[selectedPlayer.currentMoveValue].type == "magic"){
+            if(moves[self.currentMoveValue].type == "magic"){
                 const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.magDefenseMod)));
                 self.victim.health = self.victim.health - damageDealt;
                 self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
@@ -250,7 +250,7 @@ class Combatant {
                 const lineBreak2 = document.createElement("br");
                 sidebar1.appendChild(lineBreak2);
             }
-            else if(moves[selectedPlayer.currentMoveValue].type == "physical"){
+            else if(moves[self.currentMoveValue].type == "physical"){
                 const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.defenseMod)));
                 self.victim.health = self.victim.health - damageDealt;
                 self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
