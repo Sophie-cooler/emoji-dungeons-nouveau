@@ -70,7 +70,8 @@ class Combatant {
 
     };
     /*
-    display 
+    display displays the default visuals for a combatant, their health value
+    and their icon as text in their button.
     */
     display() {
 
