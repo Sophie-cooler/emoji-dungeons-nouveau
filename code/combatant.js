@@ -49,9 +49,9 @@ class Combatant {
             this.icon.onclick = function selfWasAttacked() {
                 if (selectedMove != null && selectedPlayer.hasMoved == 0) {
                     selectedPlayer.hasMoved = 1;
-                    this.issueMove(0);
+                    self.issueMove(0);
                     if (self.health <= 0) {
-                        this.die(0);
+                        self.die(0);
                     };
                 };
             };
