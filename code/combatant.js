@@ -49,9 +49,9 @@ class Combatant {
             this.icon.onclick = function selfWasAttacked() {
                 if (selectedMove != null && selectedPlayer.hasMoved == 0) {
                     selectedPlayer.hasMoved = 1;
-                    self.issueMove(0);
+                    this.issueMove(0);
                     if (self.health <= 0) {
-                        self.die(0);
+                        this.die(0);
                     };
                 };
             };
@@ -237,26 +237,27 @@ class Combatant {
     works with combatants on player team. (Untested)
     */
     issueMove(usingVictim){
+        let issuer = this
         if(usingVictim == 1){
             if(moves[self.currentMoveValue].type == "magic"){
-                const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.magDefenseMod)));
+                const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[issuer.combatantValue].damageMultiplier + self.victim.magDefenseMod)));
                 self.victim.health = self.victim.health - damageDealt;
                 self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
                 const moveMessage = document.createElement("p");
                 sidebar1.appendChild(moveMessage);
-                moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[self.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
+                moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[issuer.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
                 const lineBreak1 = document.createElement("br");
                 sidebar1.appendChild(lineBreak1);
                 const lineBreak2 = document.createElement("br");
                 sidebar1.appendChild(lineBreak2);
             }
             else if(moves[self.currentMoveValue].type == "physical"){
-                const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[self.combatantValue].damageMultiplier + self.victim.defenseMod)));
+                const damageDealt = Math.round((moves[self.currentMoveValue].damage * combatants[self.victim.combatantValue].defenseMultiplier * (combatants[issuer.combatantValue].damageMultiplier + self.victim.defenseMod)));
                 self.victim.health = self.victim.health - damageDealt;
                 self.victim.statDisplay.textContent = self.victim.health + "/" + self.victim.maxHealth;
                 const moveMessage = document.createElement("p");
                 sidebar1.appendChild(moveMessage);
-                moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[self.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
+                moveMessage.textContent = "Enemy " + combatants[self.combatantValue].name + " used " + moves[self.currentMoveValue].name + " on " + combatants[issuer.victim.combatantValue].name + ", dealing " + damageDealt + " damage.";
                 const lineBreak1 = document.createElement("br");
                 sidebar1.appendChild(lineBreak1);
                 const lineBreak2 = document.createElement("br");
@@ -265,24 +266,24 @@ class Combatant {
         }
         else if(usingVictim == 0){
             if(moves[selectedPlayer.currentMoveValue].type == "magic"){
-                const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[self.combatantValue].magDefenseMultiplier + self.magDefenseMod)));
+                const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[issuer.combatantValue].magDefenseMultiplier + self.magDefenseMod)));
                 self.health = self.health - damageDealt;
                 self.statDisplay.textContent = self.health + "/" + self.maxHealth;
                 const moveMessage = document.createElement("p");
                 sidebar1.appendChild(moveMessage);
-                moveMessage.textContent = "Player " + combatants[selectedPlayer.combatantValue].name + " used " + moves[selectedPlayer.currentMoveValue].name + " on " + combatants[self.combatantValue].name + ", dealing " + damageDealt + " damage. ";
+                moveMessage.textContent = "Player " + combatants[selectedPlayer.combatantValue].name + " used " + moves[selectedPlayer.currentMoveValue].name + " on " + combatants[issuer.combatantValue].name + ", dealing " + damageDealt + " damage. ";
                 const lineBreak1 = document.createElement("br");
                 sidebar1.appendChild(lineBreak1);
                 const lineBreak2 = document.createElement("br");
                 sidebar1.appendChild(lineBreak2);
             }
             else if(moves[selectedPlayer.currentMoveValue].type == "physical"){
-                const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[self.combatantValue].defenseMultiplier + self.defenseMod)));
+                const damageDealt = Math.round((selectedMove.damage * combatants[selectedPlayer.combatantValue].damageMultiplier * (combatants[issuer.combatantValue].defenseMultiplier + issuer.defenseMod)));
                 self.health = self.health - damageDealt;
                 self.statDisplay.textContent = self.health + "/" + self.maxHealth;
                 const moveMessage = document.createElement("p");
                 sidebar1.appendChild(moveMessage);
-                moveMessage.textContent = "Player " + combatants[selectedPlayer.combatantValue].name + " used " + moves[selectedPlayer.currentMoveValue].name + " on " + combatants[self.combatantValue].name + ", dealing " + damageDealt + " damage. ";
+                moveMessage.textContent = "Player " + combatants[selectedPlayer.combatantValue].name + " used " + moves[selectedPlayer.currentMoveValue].name + " on " + combatants[issuer.combatantValue].name + ", dealing " + damageDealt + " damage. ";
                 const lineBreak1 = document.createElement("br");
                 sidebar1.appendChild(lineBreak1);
                 const lineBreak2 = document.createElement("br");
